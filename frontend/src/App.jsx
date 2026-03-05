@@ -17,7 +17,6 @@ import 'remixicon/fonts/remixicon.css'
 
 const App = () => {
 
-  // hiix
 
   return (
     <div>

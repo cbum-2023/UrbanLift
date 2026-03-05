@@ -7,6 +7,8 @@ const server = http.createServer(app);
 
 initializeSocket(server);
 
+console.log(process.env.JWT_SECRET);  //just for testing
+
 server.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });

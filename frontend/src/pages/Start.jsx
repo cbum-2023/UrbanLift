@@ -1,16 +1,56 @@
-
 import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Start = () => {
   return (
-    <div>
-      <div className='bg-cover bg-center bg-[url(https://images.unsplash.com/photo-1619059558110-c45be64b73ae?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] h-screen pt-8 flex justify-between flex-col w-full'>
-        <img className='w-16 ml-8' src="https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoid2VhcmVcL2ZpbGVcLzhGbTh4cU5SZGZUVjUxYVh3bnEyLnN2ZyJ9:weare:F1cOF9Bps96cMy7r9Y2d7affBYsDeiDoIHfqZrbcxAw?width=1200&height=417" alt="" />
-        <div className='bg-white pb-8 py-4 px-4'>
-          <h2 className='text-[30px] font-semibold'>Get Started with Uber</h2>
-          <Link to='/login' className='flex items-center justify-center w-full bg-black text-white py-3 rounded-lg mt-5'>Continue</Link>
+    <div className='relative h-screen w-full overflow-hidden bg-[#09090F]'>
+      {/* Hero background with dark overlay */}
+      <div
+        className='absolute inset-0 bg-cover bg-center'
+        style={{
+          backgroundImage: `url(https://images.unsplash.com/photo-1619059558110-c45be64b73ae?q=80&w=2574&auto=format&fit=crop)`,
+        }}
+      />
+      {/* Gradient overlays */}
+      <div className='absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/95' />
+      <div className='absolute inset-0 bg-gradient-to-t from-[#09090F] via-transparent to-transparent' />
+
+      {/* Logo */}
+      <div className='relative z-10 pt-12 px-7'>
+        <div className='flex items-center gap-2'>
+          <div className='w-9 h-9 bg-amber-400 rounded-xl flex items-center justify-center'>
+            <i className='ri-car-fill text-black text-lg'></i>
+          </div>
+          <span className='text-white text-2xl font-bold tracking-tight'>UrbanLift</span>
         </div>
+      </div>
+
+      {/* Bottom content */}
+      <div className='absolute bottom-0 left-0 right-0 z-10 px-7 pb-12'>
+        <div className='mb-8'>
+          <p className='text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3'>Your city. Your ride.</p>
+          <h1 className='text-white text-5xl font-bold leading-tight'>
+            Move<br />smarter.<br />
+            <span className='text-amber-400'>Always.</span>
+          </h1>
+          <p className='text-white/50 text-base mt-4 leading-relaxed'>
+            Fast, reliable rides at your fingertips — anytime, anywhere in the city.
+          </p>
+        </div>
+
+        <Link
+          to='/login'
+          className='flex items-center justify-between w-full bg-amber-400 text-black font-bold py-4 px-6 rounded-2xl text-lg group'
+        >
+          <span>Get Started</span>
+          <div className='w-8 h-8 bg-black/10 rounded-xl flex items-center justify-center group-hover:bg-black/20 transition-colors'>
+            <i className='ri-arrow-right-line text-black'></i>
+          </div>
+        </Link>
+
+        <p className='text-white/30 text-xs text-center mt-5'>
+          By continuing, you agree to our Terms of Service & Privacy Policy
+        </p>
       </div>
     </div>
   )
