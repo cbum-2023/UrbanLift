@@ -6,7 +6,7 @@ const CaptainDetails = () => {
 
   const stats = [
     { icon: 'ri-timer-2-line', value: '10.2', label: 'Hrs Online', color: 'text-amber-400' },
-    { icon: 'ri-speed-up-line', value: '8.5', label: 'Avg Speed', color: 'text-blue-400' },
+    // { icon: 'ri-speed-up-line', value: 'r', label: 'Avg Speed', color: 'text-blue-400' },
     { icon: 'ri-booklet-line', value: '12', label: 'Rides Today', color: 'text-green-400' },
   ]
 
@@ -35,7 +35,7 @@ const CaptainDetails = () => {
           </div>
         </div>
         <div className='text-right bg-[#18181F] rounded-2xl px-4 py-2 border border-[#27272F]'>
-          <h4 className='text-white text-xl font-bold'>₹295</h4>
+          <h4 className='text-white text-xl font-bold'>₹0</h4>
           <p className='text-green-400 text-xs font-medium'>Earned today</p>
         </div>
       </div>
